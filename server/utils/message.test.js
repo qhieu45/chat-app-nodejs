@@ -18,7 +18,8 @@ describe('generateMessage', () => {
 describe('generateLocationMessage', () => {
     it('should generate correct Location message', () => {
         message = {from: 'Admin', latitude: 2, longitude: 3}
-        const generatedLocationMessage = generateLocationMessage(message.from, message.latitude, message.longitude);
+        const generatedLocationMessage = 
+                generateLocationMessage(message.from, message.latitude, message.longitude);
         expect(generatedLocationMessage).toInclude({
             from: message.from,
             url: `https://www.google.com/maps?q=${message.latitude},${message.longitude}`
